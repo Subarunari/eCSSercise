@@ -5,4 +5,10 @@ name = "pypi"
 
 [packages]
 
+orator = "*"
+flask = "*"
+"flask-restful" = "*"
+authlib = "*"
+
+
 [dev-packages]
