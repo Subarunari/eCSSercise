@@ -9,6 +9,7 @@ orator = "*"
 flask = "*"
 "flask-restful" = "*"
 authlib = "*"
+pymysql = "*"
 
 
 [dev-packages]
