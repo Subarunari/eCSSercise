@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block main_contents %}
+<form action={{url_for('.post_check', exercise_number=exercise_number)}} method='post'>
+    <input type="submit" />
+</form>
+exercise {{ exercise_number }}
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>eCSSercise</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" />
+        <script src="{{ url_for('static', filename='src-min/ace.js') }}" type="text/javascript" charset="utf-8"></script>
+        <script src="{{ url_for('static', filename='src-min/mode-css.js') }}" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        {% block main_contents %}{% endblock %}
+
+        <div id="csseditor"></div>
+
+        <script>
+            var editor = ace.edit("csseditor");
+            editor.setTheme("ace/theme/twilight");
+//            var CssMode = ace.require().Mode;
+            editor.session.setMode("ace/mode/css")
+        </script>
+
+    </body>
+</html>
