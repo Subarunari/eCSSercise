@@ -18,8 +18,12 @@ def get_introduction():
 
 @app.route('/exercise/<int:exercise_number>', methods=['get'])
 def get_exercises(exercise_number):
-    template_path = os.path.join('exercises', f'exercise_{exercise_number}.html')
-    return render_template(template_path, exercise_number=exercise_number)
+    return render_template("exercise.html", exercise_number=exercise_number)
+
+
+@app.route('/targethtml/<int:exercise_number>', methods=['get'])
+def get_target_html(exercise_number):
+    return render_template(os.path.join('issues', f'{exercise_number}.html'))
 
 
 @app.route('/oauth/<string:auth_type>', methods=['get'])

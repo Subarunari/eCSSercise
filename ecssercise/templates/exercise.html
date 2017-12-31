@@ -4,4 +4,5 @@
     <input type="submit" />
 </form>
 exercise {{ exercise_number }}
+<iframe id="rendered_html" src={{url_for('.get_target_html', exercise_number=exercise_number)}}></iframe>
 {% endblock %}
