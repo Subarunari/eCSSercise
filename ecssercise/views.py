@@ -18,7 +18,11 @@ def get_introduction():
 
 @app.route('/exercise/<int:exercise_number>', methods=['get'])
 def get_exercises(exercise_number):
-    return render_template("exercise.html", exercise_number=exercise_number)
+    target_html_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates/issues', f'{exercise_number}.html')
+    with open(target_html_path, mode='r', encoding='utf-8') as f:
+        content = f.read()
+
+    return render_template('exercise.html', exercise_number=exercise_number, raw_html=content)
 
 
 @app.route('/targethtml/<int:exercise_number>', methods=['get'])

@@ -5,7 +5,7 @@
     grid-template-areas: 
         "header header header       header "
         "issue  nav    nav          nav    "
-        "issue  editor rowhtml      ......."
+        "issue  editor rawhtml      ......."
         "issue  editor renderedhtml ......."
         "footer footer footer footer";
     grid-column-gap: 6px;
@@ -29,8 +29,8 @@
     height: 100%;
 }
 
-#rowhtml {
-    grid-area: rowhtml;
+#rawhtml {
+    grid-area: rawhtml;
 }
 
 #renderedhtml {

@@ -12,4 +12,11 @@ window.onload = function(e) {
         style_node.innerHTML = str;
         iframe.contentDocument.head.appendChild(style_node);
     }
+
+    var readonly_editor = ace.edit("rawhtml");
+    readonly_editor.setTheme("ace/theme/twilight");
+    readonly_editor.session.setMode("ace/mode/html");
+    readonly_editor.setOptions({
+            readOnly: true
+    });
 }
