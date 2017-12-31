@@ -7,11 +7,18 @@
         <script src="{{ url_for('static', filename='src-min/mode-css.js') }}" type="text/javascript" charset="utf-8"></script>
     </head>
     <body>
-        <h1>layout page</h1>
-        {% block main_contents %}{% endblock %}
-
-        <div id="csseditor"></div>
-
+        <div class="container">
+            <div id="header">
+                header
+            </div>
+            <div id="issue">
+                Issue
+            </div>
+            {% block main_contents %}{% endblock %}
+            <div id="footer">
+                footer
+            </div>
+        </div>
         <script src="{{ url_for('static', filename='js/css-editor.js') }}" type="text/javascript" charset="utf-8"></script> 
     </body>
 </html>

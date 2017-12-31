@@ -1,8 +1,21 @@
 {% extends "layout.html" %}
 {% block main_contents %}
-<form action={{url_for('.post_check', exercise_number=exercise_number)}} method='post'>
-    <input type="submit" />
-</form>
-exercise {{ exercise_number }}
-<iframe id="rendered_html" src={{url_for('.get_target_html', exercise_number=exercise_number)}}></iframe>
+<div id="nav">
+    exercise {{ exercise_number }}
+    <form action={{url_for('.post_check', exercise_number=exercise_number)}} method='post'>
+        <input type="submit" />
+    </form>
+</div>
+
+<div id="editor">
+    <div id="csseditor" class="fill-content"></div>
+</div>
+
+<div id="rowhtml">
+    
+</div>
+
+<div id="renderedhtml">
+    <iframe id="rendered_html" class="fill-content" src={{url_for('.get_target_html', exercise_number=exercise_number)}}></iframe>
+</div>
 {% endblock %}
