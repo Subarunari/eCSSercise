@@ -1,0 +1,56 @@
+.container {
+    display: grid;
+    grid-template-rows: 40px 40px 300px 300px 32px 70px; 
+    grid-template-columns: 160px 1fr 1fr 20px;
+    grid-template-areas: 
+        "header header header       header"
+        "issue  nav    nav          nav"
+        "issue  editor rawhtml      ......."
+        "issue  editor renderedhtml ......."
+        "issue  ...... ......       ......."
+        "footer footer footer       footer";
+    grid-column-gap: 8px;
+}
+
+#header {
+    grid-area: header;
+    margin: -8px -8px 4px -8px;
+    border-bottom: solid 0.6px;
+}
+
+#nav {
+    grid-area: nav;
+}
+
+#issue {
+    grid-area: issue;
+    border-right: solid 0.6px;
+
+}
+
+#editor {
+    grid-area: editor;
+}
+
+.fill-content {
+    width: 100%;
+    height: 100%;
+}
+
+#rawhtml {
+    grid-area: rawhtml;
+}
+
+#renderedhtml {
+    grid-area: renderedhtml;
+}
+
+#footer {
+    grid-area: footer;
+    border-top: solid 0.6px;  
+    margin: 4px -8px 0px -8px;
+}
+
+.check-button {
+    display: inline-block;
+}

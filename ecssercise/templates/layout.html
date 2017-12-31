@@ -2,17 +2,17 @@
 <html>
     <head>
         <title>eCSSercise</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
         <script src="{{ url_for('static', filename='src-min/ace.js') }}" type="text/javascript" charset="utf-8"></script>
         <script src="{{ url_for('static', filename='src-min/mode-css.js') }}" type="text/javascript" charset="utf-8"></script>
     </head>
     <body>
         <div class="container">
             <div id="header">
-                header
+                eCSSercise
             </div>
             <div id="issue">
-                Issue
+                Exercises
             </div>
             {% block main_contents %}{% endblock %}
             <div id="footer">
