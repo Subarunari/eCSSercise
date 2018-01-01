@@ -2,21 +2,19 @@
 
 .title {
   color: $accent-positive-highlight-color;
-  font-size: 24px;
-  margin-left: 12px;
-  margin-top: 6px;
+  font-size: 34px;
+  margin-left: 18px;
 }
 
 .sub-text {
-  font-size: $sub-font-size;
   color: $sub-font-color;
 }
 
 $editor-size: 300px;
 .container {
   display: grid;
-  grid-template-rows: 48px 48px $editor-size $editor-size 70px;
-  grid-template-columns: 164px 1fr 1fr;
+  grid-template-rows: 50px 42px $editor-size $editor-size 70px;
+  grid-template-columns: 200px 1fr 1fr;
   grid-template-areas: 
         "header header header       "
         "issue  nav    nav          "
@@ -24,6 +22,7 @@ $editor-size: 300px;
         "issue  editor renderedhtml "
         "footer footer footer       ";
   margin: -8px;
+  grid-column-gap: 3px;
   background-color: $main-color;
   color: $main-font-color;
   font-size: $main-font-size;
@@ -44,17 +43,23 @@ $editor-size: 300px;
   grid-area: nav;
 }
 
+$list-border-width: 2px;
 #issue {
   grid-area: issue;
-  .issue-title {
-    font-size: 24px;
+  .issue-list {
+    padding: 0px;
+    margin: 0px;
+    border-top: solid $list-border-width $main-color;
+    background-color: $editor-header-background-color;
+  }
+  .issue-item {
+    list-style-type: none;
+    padding: 4px 0px 4px 12px;
+    border-bottom: solid $list-border-width $main-color;
   }
   .issue-link {
     color: $main-font-color;
     font-size: $sub-font-size;
-  }
-  .issue-content {
-    margin-left: 12px;
   }
 }
 
@@ -85,8 +90,7 @@ $editor-size: 300px;
 }
 
 .nav-content {
-  margin-left: 24px;
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 .inline-form {

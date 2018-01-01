@@ -13,8 +13,11 @@
             </div>
             <div id="issue">
                 <div class="issue-content">
-                    <div class="issue-title">Issues</div>
-                    <a href={{ url_for('.get_exercises', exercise_number=exercise_number) }} class="issue-link">1. Selector</a>
+                    <ul class="issue-list">
+                        <li class="issue-item">
+                            <a href={{ url_for('.get_exercises', exercise_number=exercise_number) }} class="issue-link">1. Selector</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             {% block main_contents %}{% endblock %}
