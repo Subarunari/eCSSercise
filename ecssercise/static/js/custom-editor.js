@@ -13,7 +13,7 @@ window.onload = function(e) {
         iframe.contentDocument.head.appendChild(style_node);
     }
 
-    var readonly_editor = ace.edit("rawhtml");
+    var readonly_editor = ace.edit("rawhtml-editor");
     readonly_editor.setTheme("ace/theme/twilight");
     readonly_editor.session.setMode("ace/mode/html");
     readonly_editor.setOptions({

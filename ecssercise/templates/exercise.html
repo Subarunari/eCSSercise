@@ -1,21 +1,27 @@
 {% extends "layout.html" %}
 {% block main_contents %}
 <div id="nav">
-    Exercise {{ exercise_number }}
-    <form action={{url_for('.post_check', exercise_number=exercise_number)}} method='post' class="check-button">
-        <input type="submit" />
-    </form>
+    <div class="nav-content">
+        <div class="pull-right">
+            <form action={{url_for('.post_check', exercise_number=exercise_number)}} method='post' class="inline-form">
+                <input type="submit" class="check-button" value="Understand!!"/>
+            </form>
+        </div>
+    </div>
 </div>
 
 <div id="editor">
-    <div id="csseditor" class="fill-content"></div>
+    <div class="sub-text editor-header">CSS Editor</div>
+    <div id="csseditor" class="fill-content">　</div>
 </div>
 
-<div id="rawhtml" class="fill-content">
-    {{ raw_html }}
+<div id="rawhtml">
+    <div class="sub-text editor-header">Raw HTML(ReadOnly)</div>
+    <div id="rawhtml-editor" class="fill-content">{{ raw_html }}</div>
 </div>
 
 <div id="renderedhtml">
+    <div class="sub-text editor-header">Rendered HTML</div>
     <iframe id="rendered_html" class="fill-content" src={{url_for('.get_target_html', exercise_number=exercise_number)}}></iframe>
 </div>
 {% endblock %}

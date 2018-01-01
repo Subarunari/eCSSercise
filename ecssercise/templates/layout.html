@@ -9,14 +9,17 @@
     <body>
         <div class="container">
             <div id="header">
-                eCSSercise
+                <div class="title">eCSSercise</div>
             </div>
             <div id="issue">
-                Exercises
+                <div class="issue-content">
+                    <div class="issue-title">Issues</div>
+                    <a href={{ url_for('.get_exercises', exercise_number=exercise_number) }} class="issue-link">1. Selector</a>
+                </div>
             </div>
             {% block main_contents %}{% endblock %}
             <div id="footer">
-                footer
+                <p class="copyright">Copyright &copy; 2018 Subarunari</p>
             </div>
         </div>
         <script src="{{ url_for('static', filename='js/custom-editor.js') }}" type="text/javascript" charset="utf-8"></script> 
