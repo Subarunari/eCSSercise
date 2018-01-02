@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<body>
+    <h1>
+        2. Selector Advanced
+    </h1>
+    <div class="begin">
+        begin class
+    </div>
+    <p class="next">"div + .next", ".begin + .next", "div + p", ".begin + p" selector</p>
+    <p class="next">this area not styling when "div/.begin+ .next"</p>
+
+    <div class="parent">
+        parent class content
+        <div class="child">
+            ".parent > .child" selector only child
+            <p>".parent > .child > p" selector only this</p>
+            <div class="grandson">
+                <p>"grandson p" selector</p>
+            </div>
+        </div>
+        <div>
+            second-child
+        </div>
+    </div>
+
+    <div class="origin">
+        <p>".origin ~ p" is styleing following p tag</p>
+    </div>
+    <p>one</p>
+    <p>two</p>
+    <p>three</p>
+
+    <div class="first-child">
+        <p>":first-child" is only styling first element</p>
+        <p>two</p>
+        <p>three</p>
+    </div>
+</body>
