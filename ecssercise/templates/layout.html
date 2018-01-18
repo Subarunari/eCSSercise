@@ -13,28 +13,15 @@
             </div>
             <div id="issue">
                 <div class="issue-content">
+                    {% from "macros/exercise_link.html" import generate_exercise_link with context %}
                     <ul class="issue-list">
-                        <li class="issue-item">
-                            <a href={{ url_for('.get_exercises', exercise_number=1) }} class="issue-link">1. Selector</a>
-                        </li>
-                        <li class="issue-item">
-                            <a href={{ url_for('.get_exercises', exercise_number=2) }} class="issue-link">2. Selector Advanced</a>
-                        </li>
-                        <li class="issue-item">
-                            <a href={{ url_for('.get_exercises', exercise_number=3) }} class="issue-link">3. Pseudo Selector</a>
-                        </li>
-                        <li class="issue-item">
-                            <a href={{ url_for('.get_exercises', exercise_number=4) }} class="issue-link">4. Border</a>
-                        </li>
-                        <li class="issue-item">
-                            <a href={{ url_for('.get_exercises', exercise_number=5) }} class="issue-link">5. Box</a>
-                        </li>
-                        <li class="issue-item">
-                            <a href={{ url_for('.get_exercises', exercise_number=6) }} class="issue-link">6. Background</a>
-                        </li>
-                        <li class="issue-item">
-                            <a href={{ url_for('.get_exercises', exercise_number=7) }} class="issue-link">7. Font</a>
-                        </li>
+                        {{ generate_exercise_link("1. Selector", 1) }}
+                        {{ generate_exercise_link("2. Selector Advenced", 2) }}
+                        {{ generate_exercise_link("3. Pseudo Selector", 3) }}
+                        {{ generate_exercise_link("4. Border", 4) }}
+                        {{ generate_exercise_link("5. Box", 5) }}
+                        {{ generate_exercise_link("6. Background", 6) }}
+                        {{ generate_exercise_link("7. Font", 7) }}
                     </ul>
                 </div>
             </div>

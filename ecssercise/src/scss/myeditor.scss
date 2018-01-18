@@ -61,6 +61,10 @@ $list-border-width: 2px;
     color: $main-font-color;
     font-size: $sub-font-size;
   }
+  .active {
+    font-weight: bold;
+    color: $accent-positive-color;
+  }
 }
 
 #editor {

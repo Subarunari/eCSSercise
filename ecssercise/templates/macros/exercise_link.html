@@ -1,0 +1,9 @@
+{% macro generate_exercise_link(link_text, target_exercise_number) %}
+<li class="issue-item">                                 
+    {% if exercise_number is defined and target_exercise_number == exercise_number %}
+    <span class="issue-link active">{{ link_text }}</span>
+    {% else %}
+    <a href={{ url_for('.get_exercises', exercise_number=target_exercise_number) }} class="issue-link">{{ link_text }}</a>
+    {% endif %}
+</li>
+{% endmacro %}
